@@ -17,7 +17,7 @@ def sort_method(element):
 
 
 def writeResult(distribution, filename):
-    # 太慢了，跑一次要一万年，找个文件写结果
+    # 写入结果
     # distribution就是文档主题分布矩阵
 
     # 获取路径信息
@@ -252,14 +252,14 @@ class BtmModel:
 
 if __name__ == "__main__":
 
-    file_name = "data1322.csv"
+    file_name = "C10.csv"
     document = du.getDocAsWordArray(file_name, 5)
     doc_for_test = {}
 
     for name_simple in document:
         doc_for_test[name_simple] = document[name_simple]
 
-    topic_num = 12
+    topic_num = 10
 
     start = time.perf_counter()
     model = BtmModel(topic_num, doc_for_test)
@@ -279,7 +279,7 @@ if __name__ == "__main__":
         for j in range(len(doc_dis[i])):
             print("\ttopic{}:{}".format(j, doc_dis[i][j]))
 
-    save = "btm_result_12.txt"
+    save = "btm_result.txt"
     # 分布结果写入文件
     writeResult(doc_dis, save)
     t4 = time.perf_counter()

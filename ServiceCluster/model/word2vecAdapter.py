@@ -2,14 +2,13 @@ from gensim.models import word2vec
 from gensim.models import KeyedVectors
 
 """
-尝试使用word2vec获取词语的特征信息
-训练结果进行KMeans聚类操作（?）
+使用word2vec获取词语的特征信息
 """
 
 size = 10
 
 
-def build_model(text_path=r"E:\学校\快乐推荐\word2vec\text8", save_path=r"E:\学校\快乐推荐\word2vec\saveVec"):
+def build_model(text_path=r"", save_path=r""):
     print("载入语料数据")
     sentences = word2vec.Text8Corpus(text_path)
     print("进行模型训练")
@@ -49,21 +48,4 @@ def word_expand(model, word, num=3):
         return expand_word_list
     else:
         return []
-
-
-if __name__ == "__main__":
-    k = 3
-
-    text = r"E:\学校\快乐推荐\word2vec\text8"
-    save = r"E:\学校\快乐推荐\word2vec\saveVec"
-    # w2v_model = build_model(text_path=text, save_path=save)
-
-    google_save = r"E:\学校\快乐推荐\word2vec\GoogleNews_vec.bin"
-
-    w2v_model = load_model_binary(save)
-    print(w2v_model["hello"])
-    print(len(w2v_model["hello"]))
-
-    expend = word_expand(w2v_model, "happy")
-    print(expend)
 

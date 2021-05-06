@@ -1,4 +1,6 @@
-# 计划提供两种实现，一种直接第三方库，一种自己写
+"""
+包括sDPC算法和普通KMeans算法
+"""
 import numpy as np
 from sklearn.cluster import KMeans
 import random
@@ -7,8 +9,6 @@ import matplotlib.pyplot as plt
 
 
 def kMeansByFeature(k, matrix):
-    # 使用kMeans库，将特征矩阵进行聚类处理(如lda分布),参数为对应矩阵信息
-    # 构造聚类器
     data = np.array(matrix)
     estimator = KMeans(n_clusters=k)
     estimator = estimator.fit(data)
@@ -146,7 +146,7 @@ def change_result_type(clusters, matrix):
 
 
 def simple_kMeans(k, matrix, iterate):
-    # 手写kMeans，使用随机的初始聚类中心
+    # 使用随机的初始聚类中心
     center = init_random_center(k, matrix)
     """
     for j in matrix:
@@ -177,7 +177,7 @@ def simple_kMeans(k, matrix, iterate):
 
 
 def dpc_kMeans(k, matrix, iterate):
-    # dpc优化kMeans
+    # sDPC算法
     center = init_dpc_center(k, matrix)
     clusters = {}  # 用字典来存储，对应key为序号
     print("center:{}".format(center))

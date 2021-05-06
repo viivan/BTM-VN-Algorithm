@@ -205,7 +205,6 @@ def f1measureClusterResult(k, result=[], former=[]):
         return 0
 
 
-# 按照cbq论文中准确度进行计算，将分布和对应的预先分类进行映射
 # 两个聚类结果簇数量相同，对应
 # 尝试进行聚类和原分类数量不同时的准确度计算，将数量较少的类为基准进行对应
 def precision_cluster(k, result=[], former=[]):

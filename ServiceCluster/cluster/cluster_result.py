@@ -271,20 +271,7 @@ if __name__ == "__main__":
     key_num = 5
     sim_num = 3
 
-    """
-    save = r"E:\研究生\word2vec\saveVec"
+    save = r""
     model = w2v.load_model_binary(save)
     cluster_result, result = tf_idf_expand_lda_gibbs(topic, kkt, file_name, key_num, sim_num, model, iterator=500)
     print(result)
-    """
-
-    save = r"E:\研究生\word2vec\GoogleNews_vec.bin"
-    model = w2v.load_model_binary(save)
-    cluster_result, result = tf_idf_expand_lda_gibbs(topic, kkt, file_name, key_num, sim_num, model, iterator=500)
-    print(result)
-
-    # ldaCluster(topic, kkt, file_name)
-    # lda_gibbs_cluster(topic, kkt, file_name)
-    # simple_lda_kmn_result(kkt, file_name)
-    # simple_lda_result(kkt, file_name)
-    # tf_idf_w2vCluster(kkt, file_name, save_path=r"E:\学校\快乐推荐\word2vec\GoogleNews_vec.bin")

@@ -11,7 +11,7 @@ csv中获取服务文档信息
 def getDocAsWordArray(filename, fre_num=5):
     # 获取路径信息
     curPath = os.path.abspath(os.path.dirname(__file__))
-    rootPath = curPath[:curPath.find("btm_wvf\\") + len("btm_wvf\\")]
+    rootPath = curPath[:curPath.find("btm_vn\\") + len("btm_vn\\")]
     path = os.path.abspath(rootPath + "resource\\" + filename)
     print(path)
     # csv中读取信息
@@ -34,7 +34,7 @@ def getDocAsWordArray(filename, fre_num=5):
 def getFormerCategory(filename):
     # 获取路径信息
     curPath = os.path.abspath(os.path.dirname(__file__))
-    rootPath = curPath[:curPath.find("btm_wvf\\") + len("btm_wvf\\")]
+    rootPath = curPath[:curPath.find("btm_vn\\") + len("btm_vn\\")]
     path = os.path.abspath(rootPath + "resource\\" + filename)
 
     # num为对应的服务数量

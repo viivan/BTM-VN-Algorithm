@@ -9,7 +9,7 @@ import numpy as np
 """
 
 
-def clusterResult(doc={}, num=3, save_path=r"E:\学校\快乐推荐\word2vec\saveVec", result_save=False):
+def clusterResult(doc={}, num=3, save_path=r"", result_save=False):
     # 处理文档，返回聚类标签
     word_list, weight = tfidf.cal_tf_idf(doc)
     model = w2v.load_model_binary(save_path)
@@ -57,7 +57,7 @@ def clusterResultByFile(num=3):
 
 
 def save_dv(distribution):
-    # 算起来还挺慢的，保存下好了
+    # 保存结果
     pf = open(r"E:\pyProject\resource\tf_idf_w2v.txt", "r+")
     for dis in distribution:
         str_single = ""
@@ -82,13 +82,3 @@ def load_dv(save_path=r"E:\pyProject\resource\tf_idf_w2v.txt"):
     except IOError:
         print("文件无法正常打开")
         return None
-
-
-if __name__ == "__main__":
-    doc = {"1": "this is the first document",
-           "2": "this is the second second document",
-           "3": "and the third one",
-           "4": "is this the first document",
-           "5": "no of course"}
-    result = clusterResult(doc)
-    print(result)

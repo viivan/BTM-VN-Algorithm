@@ -1,7 +1,7 @@
 """
-btm_wvf(暂定)
+btm_vn实现
 利用word2vec的阈值进行词对选取
-采样过程中利用referenceWord和陶罐理论进行权重的控制
+采样过程中利用代表词对进行权重的控制
 """
 import numpy as np
 import os
@@ -14,7 +14,7 @@ import judge.whole_cluster_result as wce
 import data.data_util as du
 
 curPath = os.path.abspath(os.path.dirname(__file__))
-rootPath = curPath[:curPath.find("btm_wvf\\") + len("btm_wvf\\")]
+rootPath = curPath[:curPath.find("btm_vn\\") + len("btm_vn\\")]
 
 
 def sort_method(element):
@@ -84,7 +84,7 @@ def load_Topic_word(save_path):
         return None
 
 
-class BtmWvfModel:
+class BtmVnModel:
     k = 10  # 主题数
 
     doc_word_id = []  # doc中的词映射为id
@@ -372,8 +372,8 @@ if __name__ == "__main__":
     t_voc_list = dfl.loadVocabularyList(voc_filename)
     t_word_sim_matrix = dfl.loadWordSimMatrix(word_sim_filename)
 
-    print("开始btm模型训练")
-    b_model = BtmWvfModel(t_k, t_doc_word_id, t_voc_list, t_word_sim_matrix,
+    print("开始模型训练")
+    b_model = BtmVnModel(t_k, t_doc_word_id, t_voc_list, t_word_sim_matrix,
                           iterate=t_iterate, threshold=t_threshold, miu=t_miu)
     b_model.buildModel()
     print("训练完成")

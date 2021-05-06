@@ -120,6 +120,6 @@ if __name__ == "__main__":
            "4": "is this the first document",
            "5": "no of course"}
     # new_d = keyword_by_tf_idf(doc)
-    model = w2v.load_model_binary(r"E:\学校\快乐推荐\word2vec\api_saveVec")
+    model = w2v.load_model_binary(r"")
     doc = expend_word(model, doc, 5, 3)
     print(doc)

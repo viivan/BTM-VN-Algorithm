@@ -57,7 +57,7 @@ def getFormerCategory(filename):
 
 
 if __name__ == "__main__":
-    file_name = "text7.csv"
+    file_name = "C10.csv"
     dictionary = getDocAsWordArray(file_name)
     cate = getFormerCategory(file_name)
     print(len(cate))

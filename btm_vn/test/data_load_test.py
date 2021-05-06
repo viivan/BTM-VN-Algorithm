@@ -14,8 +14,7 @@ if __name__ == "__main__":
     path = os.path.abspath(rootPath + "resource\\" + filename)
 
     matrix = bwf.load_Doc_Topic_Matrix(path)
-    # dpc_result = kmn.dpc_kMeans(cluster_k, matrix, 20)
-    cluster_result = kmn.kMeansByFeature(cluster_k, matrix).labels_
+    cluster_result = kmn.dpc_kMeans(cluster_k, matrix, 20)
     top_result = kmn.top_cluster(matrix)
     print(top_result)
 

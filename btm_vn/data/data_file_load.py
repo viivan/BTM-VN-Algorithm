@@ -6,7 +6,7 @@ import os
 
 # 获取路径信息
 curPath = os.path.abspath(os.path.dirname(__file__))
-rootPath = curPath[:curPath.find("btm_wvf\\") + len("btm_wvf\\")]
+rootPath = curPath[:curPath.find("btm_vn\\") + len("btm_vn\\")]
 
 
 def loadWordSimMatrix(sim_filename):

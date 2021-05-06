@@ -1,10 +1,6 @@
 import model.lda_gibbs as ldaa
 import numpy as np
 from cluster import kmeans as kmn
-"""
-把几个接口封装下
-方便用gibbs采样的lda
-"""
 
 k1 = 3  # 模型主题数
 k2 = 3  # 聚类数量

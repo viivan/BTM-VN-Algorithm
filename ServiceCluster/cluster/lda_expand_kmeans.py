@@ -21,7 +21,7 @@ def clusterResult(doc={}, num=5, sim_num=3):
     # 预计取前5个，扩容为3个
     # num 为 keyword数量
     # sim_num 为 扩容数
-    model = w2v.load_model_binary(r"E:\学校\快乐推荐\word2vec\saveVec")
+    model = w2v.load_model_binary(r"")
     doc = tfidf.expend_word(model, doc, num, sim_num)
 
     # 返回对应的聚类结果
@@ -53,7 +53,7 @@ def clusterResult_gibbs(model, doc={}, num=5, sim_num=3, iterator=500):
     # 预计取前5个，扩容为3个
     # num 为 keyword数量
     # sim_num 为 扩容数
-    # model = w2v.load_model_binary(r"E:\学校\快乐推荐\word2vec\saveVec")
+    # model = w2v.load_model_binary(r"")
     print("拓展文档语料")
     doc = tfidf.expend_word(model, doc, num, sim_num)
 

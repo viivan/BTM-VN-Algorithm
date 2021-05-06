@@ -2,11 +2,11 @@ from gensim.models import word2vec
 from gensim.models import KeyedVectors
 
 """
-尝试使用word2vec获取词语的特征信息
+使用word2vec获取词语的特征信息
 """
 
 
-def build_model(text_path=r"E:\学校\快乐推荐\word2vec\text8", save_path=r"E:\学校\快乐推荐\word2vec\saveVec", size=5):
+def build_model(text_path=r"", save_path=r"", size=5):
     print("载入语料数据")
     sentences = word2vec.Text8Corpus(text_path)
     print("进行模型训练")
@@ -17,7 +17,7 @@ def build_model(text_path=r"E:\学校\快乐推荐\word2vec\text8", save_path=r"
     return model
 
 
-def load_model_binary(save_path=r"E:\学校\快乐推荐\word2vec\saveVec"):
+def load_model_binary(save_path=r""):
     print("加载模型文件{}".format(save_path))
     model = KeyedVectors.load_word2vec_format(save_path, binary=True)
     print("加载完毕")

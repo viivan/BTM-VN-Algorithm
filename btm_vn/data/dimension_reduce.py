@@ -8,7 +8,6 @@ import numpy as np
 
 
 def dimension_down(data):
-    # data就认为是list组好了
     r = np.array(data)
     tsne = TSNE(n_components=2)
     x = tsne.fit_transform(r)
