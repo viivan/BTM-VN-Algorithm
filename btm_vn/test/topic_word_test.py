@@ -8,7 +8,7 @@ import os
 
 
 def sort_method(element):
-    # 排序用函数
+    # 排序使用函数
     return element[0]
 
 

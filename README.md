@@ -1,7 +1,7 @@
 # BTM-VN-Algorithm
 ## BTM_VN重要代码以及基本实验方法介绍
-### 数据预处理
-btm_vn/data/data_util.py与/data/word_divide.py文件实现文档分词功能。</br>
+### 数据预处理 
+btm_vn/data/data_util.py与/data/word_divide.py文件实现了文档分词功能。</br>
 btm_vn/data/data_file_save.py文件中包含文件预处理方法，三个方法分别可生成服务描述的序号分词结果txt，词对相似度矩阵txt，服务描述分词结果txt。</br>
 btm_vn/data/data_file_load.py文件读取分词文档与词对相似度信息。</br>
 
