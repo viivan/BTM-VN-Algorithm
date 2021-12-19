@@ -1,5 +1,5 @@
 """
-计算多项聚类准确度结果
+计算多项聚类准确度的结果
 """
 import judge.clustereffect as ce
 
