@@ -1,5 +1,5 @@
 # 利用主题词计算主题一致性
-# 需要文档词id矩阵，主题词id矩阵
+# 需要文档词id矩阵，主题词id的矩阵
 # n为top-n词汇
 import math
 import data.data_file_load as dfl
