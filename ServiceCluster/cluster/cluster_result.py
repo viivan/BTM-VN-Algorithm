@@ -1,4 +1,4 @@
-# 训练聚类测试
+# 训练聚类的测试
 import visible.coordinatepainting as cp
 import judge.clustereffect as ce
 import data.data_util as du

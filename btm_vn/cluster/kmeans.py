@@ -1,5 +1,5 @@
 """
-包括sDPC算法和普通KMeans算法
+包括我们sDPC算法和普通KMeans算法
 """
 import numpy as np
 from sklearn.cluster import KMeans

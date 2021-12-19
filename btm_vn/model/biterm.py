@@ -1,4 +1,4 @@
-# biterm 包含两个词的词组合
+# biterm 是包含两个词的词组合
 class Biterm:
     """
     包含两个词的对应词典id 从小到大 word1,word2

@@ -9,7 +9,7 @@ from gensim.models import KeyedVectors
 def build_model(text_path=r"", save_path=r"", size=5):
     print("载入语料数据")
     sentences = word2vec.Text8Corpus(text_path)
-    print("进行模型训练")
+    print("进行模型的训练")
     model = word2vec.Word2Vec(sentences, size=size)  # size为词向量维度，窗口默认为5
     print("训练完成")
     model.wv.save_word2vec_format(save_path, binary=True)  # 二进制存储
